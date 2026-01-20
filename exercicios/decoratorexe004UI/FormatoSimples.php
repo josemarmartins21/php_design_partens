@@ -1,15 +1,9 @@
 <?php
 
 class FormatoSimples implements FormatoInterface {
-    private string $nome;
-
     public function format(string $value): string
     {
-        return "<small>{$value}</small>";
+        return "<h2>{$value}</h2>";
     }
 
-    public function setNome(string $nome): void
-    {
-        $this->nome = $nome;
-    }
 }

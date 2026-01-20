@@ -1,6 +1,6 @@
 <?php
 
-class FormatoNegrito implements FormatoInterface {
+class FormatoItalico implements FormatoInterface {
     public function __construct(private FormatoInterface $formato)
     {
         
@@ -8,7 +8,6 @@ class FormatoNegrito implements FormatoInterface {
     public function format(string $value): string
     {
         $formatoSimples = $this->formato->format($value);
-        return "<strong>{$formatoSimples}</strong>";
+        return "<i>{$formatoSimples}</i>";
     }
-
 }
